@@ -1,0 +1,11 @@
+<h1>Ergebnisse</h1>
+<table>
+	<tbody>
+<?php
+while ($row = $result->fetch_array(MYSQLI_ASSOC))
+{
+  echo "<tr><td>".$row["vorname"]."</td><td>".$row["name"]."</td><td>".$row["tel"]."</td></tr>";
+}
+?>
+	</tbody>
+</table>

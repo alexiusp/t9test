@@ -1,6 +1,16 @@
+<h1>Ein Kontakt suchen</h1>
 <?php
-while ($row = $result->fetch_array(MYSQLI_ASSOC))
-{
-  echo "<p>".$row["vorname"]." ".$row["name"].", Tel: ".$row["tel"];
+if(!empty($error)) {
+	echo "<h2 style=\"color:red\">$error</h2>";
 }
 ?>
+<form action="index.php?act=search" method="post">
+	<p>
+		<label for="word">Stichwort&nbsp;</label>
+		<input type="text" name="word" id="word" value="<?php echo $word; ?>"/>
+	</p>
+	<p>
+		<input type="submit" value="Suchen" />
+	</p>
+</form>
+<a href="index.php">Zurück</a>
