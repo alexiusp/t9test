@@ -1,4 +1,9 @@
 <h1>Ein neuer Kontakt hinzufügen</h1>
+<?php
+if(!empty($result)) {
+	echo "<h2>$result</h2>";
+}
+?>
 <form action="index.php?act=add" method="post">
 	<p>
 		<label for="name">Name&nbsp;</label>

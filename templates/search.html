@@ -1,0 +1,6 @@
+<?php
+while ($row = $result->fetch_array(MYSQLI_ASSOC))
+{
+  echo "<p>".$row["vorname"]." ".$row["name"].", Tel: ".$row["tel"];
+}
+?>
